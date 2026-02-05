@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ebb2398b42fa614cf86ae989a0b82aa1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ebb2398b42fa614cf86ae989a0b82aa1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ebb2398b42fa614cf86ae989a0b82aa1 = L.map(
+                "map_ebb2398b42fa614cf86ae989a0b82aa1",
+                {
+                    center: [52.238, 21.025],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f9679e32244c8a45c8900f398e36b0a6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f9679e32244c8a45c8900f398e36b0a6.addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+        function geo_json_cc0c9b3099ba8e3f98d80215d1380c75_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2E7D32", "fillColor": "#4CAF50", "fillOpacity": 0.45, "weight": 3};
+            }
+        }
+
+        function geo_json_cc0c9b3099ba8e3f98d80215d1380c75_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_cc0c9b3099ba8e3f98d80215d1380c75 = L.geoJson(null, {
+                onEachFeature: geo_json_cc0c9b3099ba8e3f98d80215d1380c75_onEachFeature,
+            
+                style: geo_json_cc0c9b3099ba8e3f98d80215d1380c75_styler,
+            ...{
+}
+        });
+
+        function geo_json_cc0c9b3099ba8e3f98d80215d1380c75_add (data) {
+            geo_json_cc0c9b3099ba8e3f98d80215d1380c75
+                .addData(data);
+        }
+            geo_json_cc0c9b3099ba8e3f98d80215d1380c75_add({"features": [{"geometry": {"coordinates": [[[20.9608861, 52.2169363], [20.9641477, 52.2170415], [20.9711858, 52.2196707], [20.9823438, 52.2159898], [21.0060331, 52.217357], [21.0151311, 52.2170415], [21.0252591, 52.2193552], [21.0286924, 52.2212482], [21.0398504, 52.2231411], [21.0427686, 52.2256648], [21.0434553, 52.2242978], [21.05324, 52.226506], [21.052725, 52.2279781], [21.0573598, 52.2271369], [21.074526, 52.2328145], [21.0781308, 52.2349172], [21.0844823, 52.2437472], [21.0832807, 52.2453238], [21.0861989, 52.2547823], [21.0374471, 52.2681258], [21.0307523, 52.2667601], [21.0146161, 52.2621374], [21.0029432, 52.2588803], [20.9869787, 52.2593006], [20.9830304, 52.2593006], [20.9763357, 52.2574093], [20.9672376, 52.2546772], [20.9607145, 52.2521551], [20.9589979, 52.2478463], [20.9581395, 52.2430114], [20.9555646, 52.236389], [20.9565946, 52.2303964], [20.9598562, 52.2208276], [20.9608861, 52.2169363]]], "type": "Polygon"}, "properties": {"name": "SCT Warszawa - Official"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_cc0c9b3099ba8e3f98d80215d1380c75.bindTooltip(
+                `<div>
+                     SCT Warszawa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_cc0c9b3099ba8e3f98d80215d1380c75.addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var marker_fcd7f6eef8331c7474323e73377d1828 = L.marker(
+                [52.219298, 21.004724],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_89d1f812d8ebfcc84134c86d6da1bda0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2161d18231331a9b692b85f7508bc005 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d198b329018de9f159ab22d226b119ea = $(`<div id="html_d198b329018de9f159ab22d226b119ea" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">Warsaw, al. Niepodległości</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Type:</b> traffic<br>             <b>Address:</b> al. Niepodległości 227/233         </div>         </div>`)[0];
+                popup_2161d18231331a9b692b85f7508bc005.setContent(html_d198b329018de9f159ab22d226b119ea);
+            
+        
+
+        marker_fcd7f6eef8331c7474323e73377d1828.bindPopup(popup_2161d18231331a9b692b85f7508bc005)
+        ;
+
+        
+    
+    
+            marker_fcd7f6eef8331c7474323e73377d1828.bindTooltip(
+                `<div>
+                     Warsaw, al. Niepodległości
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fcd7f6eef8331c7474323e73377d1828.setIcon(icon_89d1f812d8ebfcc84134c86d6da1bda0);
+            
+    
+            var marker_2d51c9edfcdc4bcba26711eec53ae848 = L.marker(
+                [52.243573, 20.999214],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_27c506332432e471daa11c5edade5f81 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fa3bf6904be022a1ffd03e50de3894bd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_777b9362d5a39c10bef59be3d5e2e324 = $(`<div id="html_777b9362d5a39c10bef59be3d5e2e324" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">Warsaw, ul. Solidarności</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Type:</b> traffic<br>             <b>Address:</b> al. Solidarności 83/89         </div>         </div>`)[0];
+                popup_fa3bf6904be022a1ffd03e50de3894bd.setContent(html_777b9362d5a39c10bef59be3d5e2e324);
+            
+        
+
+        marker_2d51c9edfcdc4bcba26711eec53ae848.bindPopup(popup_fa3bf6904be022a1ffd03e50de3894bd)
+        ;
+
+        
+    
+    
+            marker_2d51c9edfcdc4bcba26711eec53ae848.bindTooltip(
+                `<div>
+                     Warsaw, ul. Solidarności
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2d51c9edfcdc4bcba26711eec53ae848.setIcon(icon_27c506332432e471daa11c5edade5f81);
+            
+    
+            var marker_e6670ae70ad1b0d105ad4db06ffe7257 = L.marker(
+                [52.245704, 21.080427],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_d3183e4252b597cc7b16f4a495f35aee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ceae2719179959d404e3454912f4a5f8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_485ec461c098d75fb048525117f75f40 = $(`<div id="html_485ec461c098d75fb048525117f75f40" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">Warsaw, ul. Grochowska</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Type:</b> traffic<br>             <b>Address:</b> ul. Grochowskiej 244A          </div>         </div>`)[0];
+                popup_ceae2719179959d404e3454912f4a5f8.setContent(html_485ec461c098d75fb048525117f75f40);
+            
+        
+
+        marker_e6670ae70ad1b0d105ad4db06ffe7257.bindPopup(popup_ceae2719179959d404e3454912f4a5f8)
+        ;
+
+        
+    
+    
+            marker_e6670ae70ad1b0d105ad4db06ffe7257.bindTooltip(
+                `<div>
+                     Warsaw, ul. Grochowska
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e6670ae70ad1b0d105ad4db06ffe7257.setIcon(icon_d3183e4252b597cc7b16f4a495f35aee);
+            
+    
+            var marker_5ae3f784a966b03e5d3b7619afcf5f6e = L.marker(
+                [52.246101, 21.068199],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_ba34c5c14cff9a6d163368556bfb8a25 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "car",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33b903e65365617241cc124ee56f5c1f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_885bb2922472cb993b8d24c070ebf53c = $(`<div id="html_885bb2922472cb993b8d24c070ebf53c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">Grochowska</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Station Code:</b> 5305<br>         </div>         </div>`)[0];
+                popup_33b903e65365617241cc124ee56f5c1f.setContent(html_885bb2922472cb993b8d24c070ebf53c);
+            
+        
+
+        marker_5ae3f784a966b03e5d3b7619afcf5f6e.bindPopup(popup_33b903e65365617241cc124ee56f5c1f)
+        ;
+
+        
+    
+    
+            marker_5ae3f784a966b03e5d3b7619afcf5f6e.bindTooltip(
+                `<div>
+                     Grochowska
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5ae3f784a966b03e5d3b7619afcf5f6e.setIcon(icon_ba34c5c14cff9a6d163368556bfb8a25);
+            
+    
+            var marker_684f3f21483601ac89cba3447bfbd0f2 = L.marker(
+                [52.240898, 21.065901],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_215bf2f3cd67d504569649f063e5a2c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "car",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa0ddab8011de5c351695da43408a48d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_40c5fbae1e4a04d5454a1b6de84399d6 = $(`<div id="html_40c5fbae1e4a04d5454a1b6de84399d6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">al. Waszyngtona</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Station Code:</b> 5306<br>         </div>         </div>`)[0];
+                popup_aa0ddab8011de5c351695da43408a48d.setContent(html_40c5fbae1e4a04d5454a1b6de84399d6);
+            
+        
+
+        marker_684f3f21483601ac89cba3447bfbd0f2.bindPopup(popup_aa0ddab8011de5c351695da43408a48d)
+        ;
+
+        
+    
+    
+            marker_684f3f21483601ac89cba3447bfbd0f2.bindTooltip(
+                `<div>
+                     al. Waszyngtona
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_684f3f21483601ac89cba3447bfbd0f2.setIcon(icon_215bf2f3cd67d504569649f063e5a2c8);
+            
+    
+            var marker_db1aba7f85fb761fcb5c4434ec0eaa0b = L.marker(
+                [52.2337, 21.0769],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_03f6ecc5e5daa14951b611b06aa1f69a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "car",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df509aaf2cd2241c45f017cc10091923 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_20d8a59160885bd3b85d3e955026959d = $(`<div id="html_20d8a59160885bd3b85d3e955026959d" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">al. Stanów Zjednoczonych</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Station Code:</b> 5307<br>         </div>         </div>`)[0];
+                popup_df509aaf2cd2241c45f017cc10091923.setContent(html_20d8a59160885bd3b85d3e955026959d);
+            
+        
+
+        marker_db1aba7f85fb761fcb5c4434ec0eaa0b.bindPopup(popup_df509aaf2cd2241c45f017cc10091923)
+        ;
+
+        
+    
+    
+            marker_db1aba7f85fb761fcb5c4434ec0eaa0b.bindTooltip(
+                `<div>
+                     al. Stanów Zjednoczonych
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db1aba7f85fb761fcb5c4434ec0eaa0b.setIcon(icon_03f6ecc5e5daa14951b611b06aa1f69a);
+            
+    
+            var marker_05c874c6653238dae3a31e2dd925daae = L.marker(
+                [52.212299, 21.006201],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_f525451ef88616f3c374150fb5061d4b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "car",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1908a2d07995a69e08ab935175245888 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c20357998dcd75b07c50daeb421ef8dc = $(`<div id="html_c20357998dcd75b07c50daeb421ef8dc" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">al. Niepodległości</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Station Code:</b> 5316<br>         </div>         </div>`)[0];
+                popup_1908a2d07995a69e08ab935175245888.setContent(html_c20357998dcd75b07c50daeb421ef8dc);
+            
+        
+
+        marker_05c874c6653238dae3a31e2dd925daae.bindPopup(popup_1908a2d07995a69e08ab935175245888)
+        ;
+
+        
+    
+    
+            marker_05c874c6653238dae3a31e2dd925daae.bindTooltip(
+                `<div>
+                     al. Niepodległości
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_05c874c6653238dae3a31e2dd925daae.setIcon(icon_f525451ef88616f3c374150fb5061d4b);
+            
+    
+            var marker_e64d73ce26bdbf35a52239532f5b023b = L.marker(
+                [52.215599, 21.015499],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_7cffb87b65d45a0650ca8a72d0cb682a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "car",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b549a1243389aa855270030ddcf763e9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_378918f0e69892d24b1a1a4a0ca64211 = $(`<div id="html_378918f0e69892d24b1a1a4a0ca64211" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">Waryńskiego</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Station Code:</b> 5315<br>         </div>         </div>`)[0];
+                popup_b549a1243389aa855270030ddcf763e9.setContent(html_378918f0e69892d24b1a1a4a0ca64211);
+            
+        
+
+        marker_e64d73ce26bdbf35a52239532f5b023b.bindPopup(popup_b549a1243389aa855270030ddcf763e9)
+        ;
+
+        
+    
+    
+            marker_e64d73ce26bdbf35a52239532f5b023b.bindTooltip(
+                `<div>
+                     Waryńskiego
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e64d73ce26bdbf35a52239532f5b023b.setIcon(icon_7cffb87b65d45a0650ca8a72d0cb682a);
+            
+    
+            var marker_33b5b2eb494f756f7337228ace97da54 = L.marker(
+                [52.235802, 20.9758],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_e8d10447cde5729ad5567fefa54463af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "car",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_91a6eeff744208f37078b1260882ca0f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ce6d04951faf0f792c98c828cca08916 = $(`<div id="html_ce6d04951faf0f792c98c828cca08916" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">Wolska</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Station Code:</b> 5325<br>         </div>         </div>`)[0];
+                popup_91a6eeff744208f37078b1260882ca0f.setContent(html_ce6d04951faf0f792c98c828cca08916);
+            
+        
+
+        marker_33b5b2eb494f756f7337228ace97da54.bindPopup(popup_91a6eeff744208f37078b1260882ca0f)
+        ;
+
+        
+    
+    
+            marker_33b5b2eb494f756f7337228ace97da54.bindTooltip(
+                `<div>
+                     Wolska
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_33b5b2eb494f756f7337228ace97da54.setIcon(icon_e8d10447cde5729ad5567fefa54463af);
+            
+    
+            var marker_13147afa9ecb38423b0466ca4d7713a4 = L.marker(
+                [52.237701, 20.9743],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_257bf28adfc97631c2a8b8068ce67759 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "car",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6bf25598ed44398ed75be4cbd57e6edc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_55a98f277f30a435aa7d2cbdeeddcafa = $(`<div id="html_55a98f277f30a435aa7d2cbdeeddcafa" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">Leszno</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Station Code:</b> 5326<br>         </div>         </div>`)[0];
+                popup_6bf25598ed44398ed75be4cbd57e6edc.setContent(html_55a98f277f30a435aa7d2cbdeeddcafa);
+            
+        
+
+        marker_13147afa9ecb38423b0466ca4d7713a4.bindPopup(popup_6bf25598ed44398ed75be4cbd57e6edc)
+        ;
+
+        
+    
+    
+            marker_13147afa9ecb38423b0466ca4d7713a4.bindTooltip(
+                `<div>
+                     Leszno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_13147afa9ecb38423b0466ca4d7713a4.setIcon(icon_257bf28adfc97631c2a8b8068ce67759);
+            
+    
+            var marker_d3241bd7e2e2eaebe486f99fd5d72abb = L.marker(
+                [52.242199, 20.978701],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_71b9130385421378aa5263fa01879932 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "car",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_923564bceba0ba922f056b99e262548e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2911d8e0895f5e35eb60ec033dad133c = $(`<div id="html_2911d8e0895f5e35eb60ec033dad133c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">Okopowa</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Station Code:</b> 5327<br>         </div>         </div>`)[0];
+                popup_923564bceba0ba922f056b99e262548e.setContent(html_2911d8e0895f5e35eb60ec033dad133c);
+            
+        
+
+        marker_d3241bd7e2e2eaebe486f99fd5d72abb.bindPopup(popup_923564bceba0ba922f056b99e262548e)
+        ;
+
+        
+    
+    
+            marker_d3241bd7e2e2eaebe486f99fd5d72abb.bindTooltip(
+                `<div>
+                     Okopowa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d3241bd7e2e2eaebe486f99fd5d72abb.setIcon(icon_71b9130385421378aa5263fa01879932);
+            
+    
+            var marker_dbf1dbaf33037923360dbc40adca966b = L.marker(
+                [52.21627, 20.986521],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_3932501c891d6feb8c16794607f9f5c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "car",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8d60e874a13f1303c99f3e30ad9224a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_43510ffca60462857ee686305e547b5d = $(`<div id="html_43510ffca60462857ee686305e547b5d" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">Wawelska</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Station Code:</b> 5368<br>         </div>         </div>`)[0];
+                popup_8d60e874a13f1303c99f3e30ad9224a9.setContent(html_43510ffca60462857ee686305e547b5d);
+            
+        
+
+        marker_dbf1dbaf33037923360dbc40adca966b.bindPopup(popup_8d60e874a13f1303c99f3e30ad9224a9)
+        ;
+
+        
+    
+    
+            marker_dbf1dbaf33037923360dbc40adca966b.bindTooltip(
+                `<div>
+                     Wawelska
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dbf1dbaf33037923360dbc40adca966b.setIcon(icon_3932501c891d6feb8c16794607f9f5c7);
+            
+    
+            var marker_a6b23f3997f60f0a6e16e21ac7aab277 = L.marker(
+                [52.213837, 20.988346],
+                {
+}
+            ).addTo(map_ebb2398b42fa614cf86ae989a0b82aa1);
+        
+    
+            var icon_c7f80a2c065bf884e051dd219f78d413 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "car",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_23edbe62d91190d233c6e4777dc3e288 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ddf1874d49d3354107cfe68a5f8284e = $(`<div id="html_8ddf1874d49d3354107cfe68a5f8284e" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; min-width: 150px;">             <h4 style="margin: 0 0 5px 0;">Żwirki i Wigury</h4>             <hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">             <b>Station Code:</b> 5317<br>         </div>         </div>`)[0];
+                popup_23edbe62d91190d233c6e4777dc3e288.setContent(html_8ddf1874d49d3354107cfe68a5f8284e);
+            
+        
+
+        marker_a6b23f3997f60f0a6e16e21ac7aab277.bindPopup(popup_23edbe62d91190d233c6e4777dc3e288)
+        ;
+
+        
+    
+    
+            marker_a6b23f3997f60f0a6e16e21ac7aab277.bindTooltip(
+                `<div>
+                     Żwirki i Wigury
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a6b23f3997f60f0a6e16e21ac7aab277.setIcon(icon_c7f80a2c065bf884e051dd219f78d413);
+            
+</script>
+</html>
